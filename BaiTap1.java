@@ -7,7 +7,6 @@ public class BaiTap1 {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		boolean isPrime = true;
-
 		if (N < 2) {
 			isPrime = false;
 		}
@@ -17,6 +16,7 @@ public class BaiTap1 {
 				break;
 			}
 		}
+		
 		int sumDigits = 0;
 		int temp = N;
 		while (temp > 0) {
@@ -33,11 +33,13 @@ public class BaiTap1 {
 				break;
 			}
 		}
+		
 		if (isPrime && isSumPrime) {
 			System.out.println("YES");
 		} else {
 			System.out.println("NO");
 		}
+		
 		int maxPrimeDivisor = 0;
 		temp = N;
 		for (int i = 2; i <= Math.sqrt(temp); i++) {
@@ -49,8 +51,8 @@ public class BaiTap1 {
 		if (temp > 1) {
 			maxPrimeDivisor = temp;
 		}
-
 		System.out.println(maxPrimeDivisor);
+		
 		int sumDiv3 = 0;
 		for (int i = 1; i <= Math.sqrt(N); i++) {
 			if (N % i == 0) {
